@@ -8,7 +8,10 @@ on:
 
 jobs:
   docker-build:
-    runs-on: ubuntu-latest
+    # Only the git-runner fleet answers this label. ubuntu-latest, which this
+    # job used to ask for, is advertised by no runner here and would queue
+    # until the timeout instead of failing.
+    runs-on: hanzo-build-linux-amd64
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -24,5 +27,3 @@ jobs:
           file: ./Dockerfile
           push: false
           tags: openclaw-railway-template:ci
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
