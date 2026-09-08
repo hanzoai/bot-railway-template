@@ -2,6 +2,8 @@
 
 # OpenClaw Railway Template (1‑click deploy)
 
+[![Deploy on Hanzo](https://hanzo.app/deploy-badge.svg)](https://hanzo.app/new?template=https://github.com/hanzoai/bot-railway-template)
+
 This repo packages **OpenClaw** for Railway with a small **/setup** web wizard so users can deploy and onboard **without running any commands**.
 
 ## What you get
